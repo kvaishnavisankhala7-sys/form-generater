@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Library — FormFlow AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FormFlow <b>AI</b></span></a>
+    <nav><a class="nav-link" href="index.html">Form Builder</a><a class="nav-link active" href="prompts.html">Prompt Library <span class="nav-count">30</span></a></nav>
+    <span class="status-pill"><span class="status-dot"></span> Template gallery</span>
+  </header>
+  <main class="page-shell library-shell">
+    <section class="library-hero">
+      <div class="eyebrow"><span class="sparkle">✦</span> YOUR STARTING POINT</div>
+      <h1>A better prompt is <span>one click away.</span></h1>
+      <p>Explore detailed templates, personalise the bracketed details, then send your prompt to the builder.</p>
+      <div class="library-stats"><div><b>30</b><span>Detailed templates</span></div><div><b>7</b><span>Categories</span></div><div><b>100%</b><span>Editable prompts</span></div></div>
+    </section>
+    <section class="library-tools">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search templates, categories or keywords..." aria-label="Search templates"></label>
+      <div id="categoryFilters" class="category-filters"></div>
+      <div class="results-line"><span id="resultsCount">30 templates</span><span>Choose a card to customise its prompt</span></div>
+    </section>
+    <section id="promptGrid" class="prompt-grid"></section>
+    <p class="footnote">Tip: replace bracketed text such as [Company Name], [Maximum Age] and [Event Name] with your own details before generating.</p>
+  </main>
+  <dialog id="promptDialog" class="prompt-dialog">
+    <form method="dialog" class="dialog-top"><div><span class="step-label">CUSTOMISE TEMPLATE</span><h2 id="dialogTitle">Prompt title</h2><span id="dialogCategory" class="category-tag"></span></div><button class="icon-btn" aria-label="Close">✕</button></form>
+    <label for="promptEditor">Edit your prompt</label>
+    <textarea id="promptEditor" rows="10"></textarea>
+    <p class="dialog-tip">Personalise anything inside square brackets. You can also add or remove fields and validation rules.</p>
+    <div class="dialog-actions"><button id="copyPromptBtn" class="secondary-btn" type="button">Copy prompt</button><button id="usePromptBtn" class="primary-btn" type="button">Use in builder →</button></div>
+    <p id="dialogStatus" class="status-message" role="status"></p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
